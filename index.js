@@ -74,7 +74,12 @@ const options = {
   jiraAppend:
     process.env.CZ_JIRA_APPEND ||
     config.jiraAppend ||
-    defaults.jiraAppend
+    defaults.jiraAppend,
+    exclamationMark: getEnvOrConfig(
+      process.env.CZ_EXCLAMATION_MARK,
+      config.exclamationMark,
+      defaults.exclamationMark
+    )
 };
 
 (function(options) {
